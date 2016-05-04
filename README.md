@@ -4,14 +4,14 @@ elephant56 is a Genetic Algorithms (GAs) framework for Hadoop MapReduce with the
 
 ## Features
 
-* Sequential Genetic Algorithm
-* Parallel Genetic Algorithm
-  * Global model, also called master-slave model
-  * Grid model, also called cellular model or fine-grained parallel model
-  * Island model, also called distributed model or coarse-grained parallel model
-* Report of execution time and population evolution
-* Sample individual and genetic operator implementations
-  * Number sequence individuals, roulette wheel selection, single point crossover, etc.
+- Sequential Genetic Algorithm
+- Parallel Genetic Algorithm
+  - Global model, also called master-slave model
+  - Grid model, also called cellular model or fine-grained parallel model
+  - Island model, also called distributed model or coarse-grained parallel model
+- Report of execution time and population evolution
+- Sample individual and genetic operator implementations
+  - Number sequence individuals, roulette wheel selection, single point crossover, etc.
 
 ## Usage
 
