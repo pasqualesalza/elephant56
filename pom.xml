@@ -4,7 +4,7 @@
 
     <groupId>it.unisa</groupId>
     <artifactId>elephant56</artifactId>
-    <version>0.0.1</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>elephant56</name>
@@ -19,6 +19,9 @@
         <hadoop.version>0.23.11</hadoop.version>
         <avro.version>1.7.7</avro.version>
         <opencsv.version>2.3</opencsv.version>
+
+        <bintray.repo>pasqualesalza/maven</bintray.repo>
+        <bintray.package>elephant56</bintray.package>
     </properties>
 
     <!-- Global configuration. -->
@@ -135,5 +138,12 @@
             <version>${opencsv.version}</version>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>bintray</id>
+            <url>https://api.bintray.com/maven/${bintray.repo}/${bintray.package}/;publish=1</url>
+        </repository>
+    </distributionManagement>
 
 </project>
