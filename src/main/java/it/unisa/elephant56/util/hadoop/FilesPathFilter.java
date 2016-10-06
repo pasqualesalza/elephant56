@@ -19,8 +19,8 @@ public class FilesPathFilter extends Configured implements PathFilter {
         this.extension = extension;
     }
 
-	@Override
-	public boolean accept(Path path) {
+    @Override
+    public boolean accept(Path path) {
         boolean condition = true;
 
         if (this.prefix != null)
@@ -30,5 +30,5 @@ public class FilesPathFilter extends Configured implements PathFilter {
             condition &= path.getName().endsWith("." + this.extension);
 
         return condition;
-	}
+    }
 }

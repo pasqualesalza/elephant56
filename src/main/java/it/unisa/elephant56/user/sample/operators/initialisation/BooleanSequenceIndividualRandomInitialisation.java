@@ -17,31 +17,32 @@ import java.util.List;
 public class BooleanSequenceIndividualRandomInitialisation<FitnessValueType extends FitnessValue>
         extends SequenceIndividualRandomInitialisation<BooleanSequentialIndividual, FitnessValueType, Boolean> {
 
-	private static final List<Boolean> possibleElements = new ArrayList<>();
-	static {
-		possibleElements.add(true);
-		possibleElements.add(false);
-	}
-	
-	/**
-	 * Constructs an instance.
-	 *
-	 * @param userProperties the user properties
-	 * @param configuration the configuration
-	 */
-	public BooleanSequenceIndividualRandomInitialisation(
+    private static final List<Boolean> possibleElements = new ArrayList<>();
+
+    static {
+        possibleElements.add(true);
+        possibleElements.add(false);
+    }
+
+    /**
+     * Constructs an instance.
+     *
+     * @param userProperties the user properties
+     * @param configuration  the configuration
+     */
+    public BooleanSequenceIndividualRandomInitialisation(
             Integer islandNumber, Integer totalNumberOfIslands, Properties userProperties, Configuration configuration, Integer populationSize
     ) {
         super(islandNumber, totalNumberOfIslands, userProperties, configuration, populationSize);
-	}
+    }
 
-	@Override
-	protected List<Boolean> getPossibleElements() {
-		return possibleElements;
-	}
-	
-	@Override
-	protected Class<BooleanSequentialIndividual> getSequenceIndividualClass() {
-		return BooleanSequentialIndividual.class;
-	}
+    @Override
+    protected List<Boolean> getPossibleElements() {
+        return possibleElements;
+    }
+
+    @Override
+    protected Class<BooleanSequentialIndividual> getSequenceIndividualClass() {
+        return BooleanSequentialIndividual.class;
+    }
 }

@@ -30,10 +30,10 @@ public class GridReducer
     // GenerationsExecutor object.
     private GridDistributedSecondaryGenerationsBlockExecutor generationsBlockExecutor;
 
-	// Configuration object.
-	private Configuration configuration;
+    // Configuration object.
+    private Configuration configuration;
 
-	// Configuration variables.
+    // Configuration variables.
     private boolean isTimeReporterActive;
     private GeneticOperatorsTimeReporter geneticOperatorsTimeReporter;
     private MapReduceTimeReporter mapreduceTimeReporter;
@@ -45,8 +45,8 @@ public class GridReducer
     // Avro Multiple Outputs object.
     private AvroMultipleOutputs avroMultipleOutputs;
 
-	// Task objects.
-	FileSystem fileSystem;
+    // Task objects.
+    FileSystem fileSystem;
 
     private long generationNumber;
 
@@ -57,10 +57,10 @@ public class GridReducer
 
     private Properties userProperties;
 
-	@Override
-	protected void setup(Context context) throws IOException, InterruptedException {
-		// Reads the configuration from the context.
-		this.configuration = context.getConfiguration();
+    @Override
+    protected void setup(Context context) throws IOException, InterruptedException {
+        // Reads the configuration from the context.
+        this.configuration = context.getConfiguration();
 
         // Reads the task number.
         this.nodeNumber = configuration.getInt("mapred.task.partition", 0);
@@ -189,7 +189,7 @@ public class GridReducer
 
         // Instantiates the population.
         this.inputPopulation = new ArrayList<>();
-	}
+    }
 
     @Override
     protected void reduce(AvroKey<IndividualWrapper<Individual, FitnessValue>> key, Iterable<IntWritable> values,
@@ -209,9 +209,9 @@ public class GridReducer
         this.inputPopulation.add(individualWrapperClone);
     }
 
-	@Override
-	protected void cleanup(Context context)
-			throws IOException, InterruptedException {
+    @Override
+    protected void cleanup(Context context)
+            throws IOException, InterruptedException {
         // Sorts the population.
         Collections.reverse(this.inputPopulation);
 
@@ -258,5 +258,5 @@ public class GridReducer
             // Finalises the file.
             this.individualReporter.finaliseFile();
         }
-	}
+    }
 }

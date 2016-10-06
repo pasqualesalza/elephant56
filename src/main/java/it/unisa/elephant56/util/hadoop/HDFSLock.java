@@ -25,8 +25,8 @@ public class HDFSLock {
      * Creates an instance of lock with the given fairness policy.
      *
      * @param lockFilePath the file path where the lock will be acquired
-     * @param fileSystem filesystem where the will be created
-     * @param id for the temporary lock name file
+     * @param fileSystem   filesystem where the will be created
+     * @param id           for the temporary lock name file
      */
     public HDFSLock(Path lockFilePath, FileSystem fileSystem, String id) {
         this.lockFilePath = lockFilePath;
@@ -38,7 +38,6 @@ public class HDFSLock {
      * Acquires the lock only if it is free at the time of invocation.
      *
      * @return true if the lock has been acquired, false otherwise
-     *
      * @throws IOException
      */
     public boolean tryLock() throws IOException {
@@ -51,7 +50,6 @@ public class HDFSLock {
      * If the lock is not available waits custom time before trying again.
      *
      * @param timeToWait time to wait before trying again
-     *
      * @throws IOException
      * @throws InterruptedException
      */
@@ -66,7 +64,6 @@ public class HDFSLock {
      * If the lock is not available waits @DEFAULT_TIME_TO_WAIT before trying again.
      *
      * @return "true" if the lock has been acquired, "false" otherwise
-     *
      * @throws IOException
      * @throws InterruptedException
      */

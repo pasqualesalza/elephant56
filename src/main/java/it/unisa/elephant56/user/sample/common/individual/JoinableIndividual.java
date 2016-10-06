@@ -9,12 +9,11 @@ import it.unisa.elephant56.user.common.Individual;
  */
 public interface JoinableIndividual<IndividualType extends Individual> {
 
-	/**
-	 * Join the individual with the "other" individual and returns the generated individual.
-	 *
-	 * @param other the other individual to join with
-	 * 
-	 * @return the individual generated
-	 */
-	public IndividualType join(IndividualType other);
+    /**
+     * Join the individual with the "other" individual and returns the generated individual.
+     *
+     * @param other the other individual to join with
+     * @return the individual generated
+     */
+    public IndividualType join(IndividualType other);
 }

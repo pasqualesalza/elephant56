@@ -39,7 +39,7 @@ public class GridDistributedSecondaryGenerationsBlockExecutor extends Generation
         TerminationConditionCheck<Individual, FitnessValue> terminationConditionCheckClassInstance = null;
         Elitism<Individual, FitnessValue> elitismClassInstance = null;
         ParentsSelection<Individual, FitnessValue> parentsSelectionClassInstance = null;
-        Crossover<Individual, FitnessValue> crossoverClassInstance= null;
+        Crossover<Individual, FitnessValue> crossoverClassInstance = null;
         Mutation<Individual, FitnessValue> mutationClassInstance = null;
         SurvivalSelection<Individual, FitnessValue> survivalSelectionClassInstance = null;
 
@@ -98,7 +98,7 @@ public class GridDistributedSecondaryGenerationsBlockExecutor extends Generation
 
         // Individuals termination condition check.
         this.runIndividualsTerminationConditionCheck(currentPopulation,
-                        terminationConditionCheckClassInstance);
+                terminationConditionCheckClassInstance);
 
         // Registers the generation start time.
         long generationStartTime = System.currentTimeMillis();

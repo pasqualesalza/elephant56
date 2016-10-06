@@ -4,7 +4,7 @@
 
     <groupId>it.unisa</groupId>
     <artifactId>elephant56</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>elephant56</name>
@@ -17,7 +17,7 @@
         <junit.version>4.10</junit.version>
 
         <hadoop.version>0.23.11</hadoop.version>
-        <avro.version>1.7.7</avro.version>
+        <avro.version>1.7.4</avro.version>
         <opencsv.version>2.3</opencsv.version>
 
         <bintray.repo>pasqualesalza/maven</bintray.repo>

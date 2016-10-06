@@ -19,38 +19,38 @@ import it.unisa.elephant56.user.operators.Elitism;
  * @param <FitnessValueType>
  */
 public class BestIndividualsElitism<IndividualType extends Individual, FitnessValueType extends FitnessValue>
-		extends Elitism<IndividualType, FitnessValueType> {
+        extends Elitism<IndividualType, FitnessValueType> {
 
     public final static String INT_NUMBER_OF_ELITISTS =
             "best_individuals_elitism.configuration.number_of_elitists.int";
 
     private int numberOfElitists;
 
-	/**
-	 * Constructs the instance.
-	 */
-	public BestIndividualsElitism(
+    /**
+     * Constructs the instance.
+     */
+    public BestIndividualsElitism(
             Integer islandNumber, Integer totalNumberOfIslands, Properties userProperties, Configuration configuration
     ) {
         super(islandNumber, totalNumberOfIslands, userProperties, configuration);
 
         this.numberOfElitists = userProperties.getInt(INT_NUMBER_OF_ELITISTS, 0);
     }
-	
-	@Override
-	public List<IndividualWrapper<IndividualType, FitnessValueType>> selectElite(
+
+    @Override
+    public List<IndividualWrapper<IndividualType, FitnessValueType>> selectElite(
             List<IndividualWrapper<IndividualType, FitnessValueType>> population
     ) {
-		// Sorts the population by the fitness value.
-		Collections.sort(population, Collections.reverseOrder());
-		
-		// Selects the individuals.
-		List<IndividualWrapper<IndividualType, FitnessValueType>> elitePopulation =
+        // Sorts the population by the fitness value.
+        Collections.sort(population, Collections.reverseOrder());
+
+        // Selects the individuals.
+        List<IndividualWrapper<IndividualType, FitnessValueType>> elitePopulation =
                 new ArrayList<IndividualWrapper<IndividualType, FitnessValueType>>(numberOfElitists);
-		for (int i = 0; i < numberOfElitists; i++)
-			elitePopulation.add(population.get(i));
-		
-		// Returns the selection.
-		return elitePopulation;
-	}
+        for (int i = 0; i < numberOfElitists; i++)
+            elitePopulation.add(population.get(i));
+
+        // Returns the selection.
+        return elitePopulation;
+    }
 }

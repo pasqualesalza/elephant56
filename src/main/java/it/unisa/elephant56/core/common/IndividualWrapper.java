@@ -208,7 +208,6 @@ public class IndividualWrapper<IndividualType extends Individual, FitnessValueTy
     }
 
 
-
     /**
      * Compares by the fitness value.
      *

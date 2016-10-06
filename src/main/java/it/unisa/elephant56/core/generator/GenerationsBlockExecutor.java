@@ -268,7 +268,7 @@ public class GenerationsBlockExecutor {
         TerminationConditionCheck<Individual, FitnessValue> terminationConditionCheckClassInstance = null;
         Elitism<Individual, FitnessValue> elitismClassInstance = null;
         ParentsSelection<Individual, FitnessValue> parentsSelectionClassInstance = null;
-        Crossover<Individual, FitnessValue> crossoverClassInstance= null;
+        Crossover<Individual, FitnessValue> crossoverClassInstance = null;
         Mutation<Individual, FitnessValue> mutationClassInstance = null;
         SurvivalSelection<Individual, FitnessValue> survivalSelectionClassInstance = null;
 
@@ -423,12 +423,12 @@ public class GenerationsBlockExecutor {
                     // Assign migrants to destinations.
                     this.migrationAssignments = runMigration(currentPopulation, migrationClassInstance);
                 }
-                
+
                 // Writes the time report.
                 if (this.isTimeReporterActive())
                     this.generationsBlockTimeReporter.writeTime(this.nodeNumber, this.generationsBlockNumber,
-                        this.currentGenerationNumber, GenerationsBlockTimeReporter.PhaseType.GENERATION,
-                        generationStartTime, System.currentTimeMillis());
+                            this.currentGenerationNumber, GenerationsBlockTimeReporter.PhaseType.GENERATION,
+                            generationStartTime, System.currentTimeMillis());
 
                 // Stops the cycle.
                 break;
@@ -479,8 +479,8 @@ public class GenerationsBlockExecutor {
             // Writes the time report.
             if (this.isTimeReporterActive())
                 this.generationsBlockTimeReporter.writeTime(this.nodeNumber, this.generationsBlockNumber,
-                    this.currentGenerationNumber, GenerationsBlockTimeReporter.PhaseType.GENERATION,
-                    generationStartTime, System.currentTimeMillis());
+                        this.currentGenerationNumber, GenerationsBlockTimeReporter.PhaseType.GENERATION,
+                        generationStartTime, System.currentTimeMillis());
 
             // Increments the generation number.
             this.currentGenerationNumber++;

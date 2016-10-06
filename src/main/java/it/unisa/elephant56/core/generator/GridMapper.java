@@ -30,35 +30,35 @@ public class GridMapper
     // GenerationsExecutor object.
     private GridDistributedPrimaryGenerationsBlockExecutor generationsBlockExecutor;
 
-	// Configuration object.
-	private Configuration configuration;
+    // Configuration object.
+    private Configuration configuration;
 
-	// Configuration variables.
+    // Configuration variables.
     private boolean isInitialisationActive;
 
-	private boolean isTimeReporterActive;
-	private GeneticOperatorsTimeReporter geneticOperatorsTimeReporter;
+    private boolean isTimeReporterActive;
+    private GeneticOperatorsTimeReporter geneticOperatorsTimeReporter;
     private GenerationsBlockTimeReporter generationsBlockTimeReporter;
     private MapReduceTimeReporter mapreduceTimeReporter;
     private Path mapreduceMapperPartialTimeReportFilePath;
-	
-	// Task objects.
-	private FileSystem fileSystem;
+
+    // Task objects.
+    private FileSystem fileSystem;
 
     private long generationNumber;
 
-	private int nodeNumber;
-	private int totalNumberOfNodes;
-	
-	private List<IndividualWrapper<Individual, FitnessValue>> inputPopulation;
+    private int nodeNumber;
+    private int totalNumberOfNodes;
 
-	private Properties userProperties;
+    private List<IndividualWrapper<Individual, FitnessValue>> inputPopulation;
+
+    private Properties userProperties;
 
     private List<Integer> partitionerNodesDestinations;
 
     @SuppressWarnings("unchecked")
-	@Override
-	protected void setup(Context context) throws IOException {
+    @Override
+    protected void setup(Context context) throws IOException {
         // Reads the configuration from the context.
         this.configuration = context.getConfiguration();
 
@@ -165,9 +165,9 @@ public class GridMapper
         // Instantiates the partitioner nodes destionation list.
         this.partitionerNodesDestinations = new ArrayList<>();
     }
-	
-	@Override
-	protected void map(AvroKey<IndividualWrapper<Individual, FitnessValue>> key, IntWritable value, Context context) {
+
+    @Override
+    protected void map(AvroKey<IndividualWrapper<Individual, FitnessValue>> key, IntWritable value, Context context) {
         if (!this.isInitialisationActive) {
             // Adds the current individual to the population.
             IndividualWrapper<Individual, FitnessValue> individualWrapperClone = null;
@@ -188,8 +188,8 @@ public class GridMapper
     /**
      * Executes the Genetic Algorithm functions.
      */
-	@Override
-	protected void cleanup(Context context) throws IOException, InterruptedException {
+    @Override
+    protected void cleanup(Context context) throws IOException, InterruptedException {
         // Sets the input population.
         this.generationsBlockExecutor.setInputPopulation(this.inputPopulation);
 
@@ -240,5 +240,5 @@ public class GridMapper
             this.geneticOperatorsTimeReporter.finaliseFile();
             this.generationsBlockTimeReporter.finaliseFile();
         }
-	}
+    }
 }

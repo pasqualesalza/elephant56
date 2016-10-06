@@ -30,7 +30,9 @@ public class MapReduceTimeReporter extends TimeReporter {
         REDUCER_INITIALISATION,
         REDUCER_COMPUTATION,
         REDUCER_FINALISATION
-    };
+    }
+
+    ;
 
     public static final int ISLAND_NUMBER_PARTIAL_TIMES_HEADER_INDEX = 0;
     public static final int GENERATIONS_BLOCK_NUMBER_PARTIAL_TIMES_HEADER_INDEX = 1;

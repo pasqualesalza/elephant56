@@ -29,7 +29,7 @@ public class RandomDriver extends Driver {
      */
     public RandomDriver() {
         super();
-        
+
         this.inputPopulation = new ArrayList<IndividualWrapper<Individual, FitnessValue>>();
     }
 

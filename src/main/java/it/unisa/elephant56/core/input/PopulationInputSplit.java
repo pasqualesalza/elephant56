@@ -24,28 +24,29 @@ public class PopulationInputSplit extends InputSplit implements Writable {
 
     private String[] locations;
 
-	/**
-	 * Constructs an empty input split.
-	 */
-	public PopulationInputSplit() {}
-	
-	/**
-	 * Constructs the input split.
-	 *
-	 * @param isInitialisationActive "true" if initialisation is active, "false" otherwise
-	 * @param filePath the path of the file
-     * @param numberOfIndividuals the number of individuals in the split
+    /**
+     * Constructs an empty input split.
+     */
+    public PopulationInputSplit() {
+    }
+
+    /**
+     * Constructs the input split.
+     *
+     * @param isInitialisationActive       "true" if initialisation is active, "false" otherwise
+     * @param filePath                     the path of the file
+     * @param numberOfIndividuals          the number of individuals in the split
      * @param partitionerNodesDestinations the nodes destinations of the individuals
-     * @param locations the locations of the individuals into HDFS
-	 */
-	public PopulationInputSplit(boolean isInitialisationActive, Path filePath, int numberOfIndividuals, List<Integer> partitionerNodesDestinations, String[] locations) {
-		this.isInitialisationActive = isInitialisationActive;
+     * @param locations                    the locations of the individuals into HDFS
+     */
+    public PopulationInputSplit(boolean isInitialisationActive, Path filePath, int numberOfIndividuals, List<Integer> partitionerNodesDestinations, String[] locations) {
+        this.isInitialisationActive = isInitialisationActive;
         this.filePath = filePath;
         this.numberOfIndividuals = numberOfIndividuals;
         this.partitionerNodesDestinations = partitionerNodesDestinations;
 
         this.locations = locations;
-	}
+    }
 
     /**
      * Retrieves the file path.
@@ -56,11 +57,11 @@ public class PopulationInputSplit extends InputSplit implements Writable {
         return this.filePath;
     }
 
-	/**
-	 * Serialises the split.
-	 */
-	@Override
-	public void write(DataOutput output) throws IOException {
+    /**
+     * Serialises the split.
+     */
+    @Override
+    public void write(DataOutput output) throws IOException {
         output.writeBoolean(this.isInitialisationActive);
 
         String filePathString = "";
@@ -73,13 +74,13 @@ public class PopulationInputSplit extends InputSplit implements Writable {
         String partitionerNodesDestinationsString =
                 convertIntegersListToString(this.partitionerNodesDestinations);
         Text.writeString(output, partitionerNodesDestinationsString);
-	}
-	
-	/**
-	 * Deserialises the split.
-	 */
-	@Override
-	public void readFields(DataInput input) throws IOException {
+    }
+
+    /**
+     * Deserialises the split.
+     */
+    @Override
+    public void readFields(DataInput input) throws IOException {
         this.isInitialisationActive = input.readBoolean();
 
         String filePathString = Text.readString(input);
@@ -91,20 +92,20 @@ public class PopulationInputSplit extends InputSplit implements Writable {
 
         String partitionerNodesDestinationsString = Text.readString(input);
         this.partitionerNodesDestinations = convertStringToIntegersList(partitionerNodesDestinationsString);
-	}
-	
-	/**
-	 * Returns the number of Avro objects inside the split.
-	 */
-	@Override
-	public long getLength() throws IOException, InterruptedException {
-		return this.numberOfIndividuals;
-	}
-	
-	@Override
-	public String[] getLocations() throws IOException, InterruptedException {
+    }
+
+    /**
+     * Returns the number of Avro objects inside the split.
+     */
+    @Override
+    public long getLength() throws IOException, InterruptedException {
+        return this.numberOfIndividuals;
+    }
+
+    @Override
+    public String[] getLocations() throws IOException, InterruptedException {
         return this.locations;
-	}
+    }
 
     public List<Integer> getPartitionerNodesDestinations() {
         return this.partitionerNodesDestinations;

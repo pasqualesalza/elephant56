@@ -28,10 +28,10 @@ public class GridDistributedDriver extends DistributedDriver {
     /**
      * Constructs a new driver.
      *
-     * @param applicationName the name of the application
+     * @param applicationName      the name of the application
      * @param applicationMainClass the main class that launches the chain on the cluster
-     * @param numberOfNodes the number of nodes
-     * @param randomSeed the random seed
+     * @param numberOfNodes        the number of nodes
+     * @param randomSeed           the random seed
      */
     public GridDistributedDriver(String applicationName, Class<?> applicationMainClass, int numberOfNodes,
                                  long randomSeed) {
@@ -43,11 +43,11 @@ public class GridDistributedDriver extends DistributedDriver {
      * Constructs a new driver specifying the configuration,
      * referred only to the filesystem operations.
      *
-     * @param applicationName the name of the application
+     * @param applicationName      the name of the application
      * @param applicationMainClass the main class that launches the chain on the cluster
-     * @param numberOfNodes the number of nodes
-     * @param randomSeed the random seed
-     * @param configuration the configuration
+     * @param numberOfNodes        the number of nodes
+     * @param randomSeed           the random seed
+     * @param configuration        the configuration
      */
     public GridDistributedDriver(
             String applicationName, Class<?> applicationMainClass, int numberOfNodes, long randomSeed,
@@ -60,7 +60,7 @@ public class GridDistributedDriver extends DistributedDriver {
      * Initialises the driver.
      *
      * @param numberOfNodes the number of nodes
-     * @param randomSeed the random seed
+     * @param randomSeed    the random seed
      */
     private void init(int numberOfNodes, long randomSeed) {
         this.numberOfNodes = numberOfNodes;

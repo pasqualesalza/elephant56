@@ -26,10 +26,10 @@ public class IslandReducer
     // GenerationsExecutor object.
     private GenerationsBlockExecutor generationsBlockExecutor;
 
-	// Configuration object.
-	private Configuration configuration;
+    // Configuration object.
+    private Configuration configuration;
 
-	// Configuration variables.
+    // Configuration variables.
     private boolean isMigrationActive;
 
     private boolean isTimeReporterActive;
@@ -39,8 +39,8 @@ public class IslandReducer
     // Avro Multiple Outputs object.
     private AvroMultipleOutputs avroMultipleOutputs;
 
-	// Task objects.
-	FileSystem fileSystem;
+    // Task objects.
+    FileSystem fileSystem;
 
     private long generationsBlockNumber;
 
@@ -51,10 +51,10 @@ public class IslandReducer
 
     private boolean isTerminationConditionSatisfied;
 
-	@Override
-	protected void setup(Context context) throws IOException, InterruptedException {
-		// Reads the configuration from the context.
-		this.configuration = context.getConfiguration();
+    @Override
+    protected void setup(Context context) throws IOException, InterruptedException {
+        // Reads the configuration from the context.
+        this.configuration = context.getConfiguration();
 
         // Reads the task number.
         this.islandNumber = configuration.getInt("mapred.task.partition", 0);
@@ -119,7 +119,7 @@ public class IslandReducer
         // Checks if a termination condition satisfaction occurred.
         this.isTerminationConditionSatisfied =
                 generationsBlockExecutor.checkTerminationConditionSatisfactionNotifications();
-	}
+    }
 
     @Override
     protected void reduce(AvroKey<IndividualWrapper<Individual, FitnessValue>> key, Iterable<IntWritable> values,
@@ -139,9 +139,9 @@ public class IslandReducer
         this.inputPopulation.add(individualWrapperClone);
     }
 
-	@Override
-	protected void cleanup(Context context)
-			throws IOException, InterruptedException {
+    @Override
+    protected void cleanup(Context context)
+            throws IOException, InterruptedException {
         // Sorts the population.
         Collections.reverse(this.inputPopulation);
 
@@ -193,5 +193,5 @@ public class IslandReducer
             this.mapreduceTimeReporter.writePartialTimesToFile(this.mapreduceReducerPartialTimeReportFilePath,
                     this.fileSystem);
         }
-	}
+    }
 }

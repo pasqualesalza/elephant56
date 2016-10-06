@@ -27,9 +27,9 @@ public class IslandDistributedDriver extends DistributedDriver {
     /**
      * Constructs a new driver.
      *
-     * @param applicationName the name of the application
+     * @param applicationName      the name of the application
      * @param applicationMainClass the main class that launches the chain on the cluster
-     * @param numberOfIslands the number of islands
+     * @param numberOfIslands      the number of islands
      */
     public IslandDistributedDriver(String applicationName, Class<?> applicationMainClass, int numberOfIslands) {
         super(applicationName, applicationMainClass);
@@ -40,10 +40,10 @@ public class IslandDistributedDriver extends DistributedDriver {
      * Constructs a new driver specifying the configuration,
      * referred only to the filesystem operations.
      *
-     * @param applicationName the name of the application
+     * @param applicationName      the name of the application
      * @param applicationMainClass the main class that launches the chain on the cluster
-     * @param numberOfIslands the number of islands
-     * @param configuration the configuration
+     * @param numberOfIslands      the number of islands
+     * @param configuration        the configuration
      */
     public IslandDistributedDriver(
             String applicationName, Class<?> applicationMainClass, int numberOfIslands, Configuration configuration) {

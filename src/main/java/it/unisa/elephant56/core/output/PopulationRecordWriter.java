@@ -21,7 +21,7 @@ import org.apache.hadoop.mapreduce.TaskAttemptContext;
  */
 public class PopulationRecordWriter<K, V> extends RecordWriter<AvroKey<K>, V> {
 
-	private final CodecFactory compressionCodec;
+    private final CodecFactory compressionCodec;
     private ArrayList<AvroKey<K>> recordsList;
     private Schema writerSchema;
     private OutputStream outputStream;
@@ -29,29 +29,28 @@ public class PopulationRecordWriter<K, V> extends RecordWriter<AvroKey<K>, V> {
     // Record counter.
     private int numberOfRecords;
 
-	/**
-	 * Constructor.
-	 *
-	 * @param writerSchema The writer schema for the records in the Avro container file.
-	 * @param compressionCodec A compression codec factory for the Avro container file.
-	 * @param outputStream The output stream to write the Avro container file to.
-	 *
+    /**
+     * Constructor.
+     *
+     * @param writerSchema     The writer schema for the records in the Avro container file.
+     * @param compressionCodec A compression codec factory for the Avro container file.
+     * @param outputStream     The output stream to write the Avro container file to.
      * @throws IOException If the record writer cannot be opened.
-	 */
-	public PopulationRecordWriter(Schema writerSchema, CodecFactory compressionCodec, OutputStream outputStream)
+     */
+    public PopulationRecordWriter(Schema writerSchema, CodecFactory compressionCodec, OutputStream outputStream)
             throws IOException {
-		this.compressionCodec = compressionCodec;
+        this.compressionCodec = compressionCodec;
         this.writerSchema = writerSchema;
         this.outputStream = outputStream;
         this.recordsList = new ArrayList<AvroKey<K>>();
 
         // Initialises the counter.
         this.numberOfRecords = 0;
-	}
-	
-	@Override
-	public void write(AvroKey<K> key, V value)
-			throws IOException {
+    }
+
+    @Override
+    public void write(AvroKey<K> key, V value)
+            throws IOException {
         // Clones the key.
         AvroKey<K> keyClone = new AvroKey<K>(key.datum());
 
@@ -60,10 +59,10 @@ public class PopulationRecordWriter<K, V> extends RecordWriter<AvroKey<K>, V> {
 
         // Increments the counter.
         this.numberOfRecords++;
-	}
+    }
 
-	@Override
-	public void close(TaskAttemptContext context) throws IOException {
+    @Override
+    public void close(TaskAttemptContext context) throws IOException {
         // Create an Avro container file and a writer to it.
         DataFileWriter<K> avroFileWriter;
         avroFileWriter = new DataFileWriter<K>(new ReflectDatumWriter<K>(writerSchema));
@@ -78,6 +77,6 @@ public class PopulationRecordWriter<K, V> extends RecordWriter<AvroKey<K>, V> {
             avroFileWriter.append(record.datum());
 
         // Close the stream.
-		avroFileWriter.close();
-	}
+        avroFileWriter.close();
+    }
 }
