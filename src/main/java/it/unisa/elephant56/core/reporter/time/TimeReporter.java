@@ -36,7 +36,6 @@ public class TimeReporter extends Reporter {
      * Converts the time in millisenconds in a human readable form "hh:mm:ss".
      *
      * @param msTime the time in milliseconds
-     *
      * @return the human readable string
      */
     public static String convertToHumansTime(long msTime) {

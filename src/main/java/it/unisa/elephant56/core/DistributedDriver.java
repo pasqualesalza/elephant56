@@ -55,7 +55,7 @@ public class DistributedDriver extends Driver {
     /**
      * Constructs a new driver.
      *
-     * @param applicationName the name of the application
+     * @param applicationName      the name of the application
      * @param applicationMainClass the main class that launches the chain on the cluster
      */
     public DistributedDriver(String applicationName, Class<?> applicationMainClass) {
@@ -67,9 +67,9 @@ public class DistributedDriver extends Driver {
      * Constructs a new driver specifying the configuration,
      * referred only to the filesystem operations.
      *
-     * @param applicationName the name of the application
+     * @param applicationName      the name of the application
      * @param applicationMainClass the main class that launches the chain on the cluster
-     * @param configuration the configuration
+     * @param configuration        the configuration
      */
     public DistributedDriver(
             String applicationName, Class<?> applicationMainClass, Configuration configuration) {
@@ -80,7 +80,7 @@ public class DistributedDriver extends Driver {
     /**
      * Initialises the driver.
      *
-     * @param applicationName the name of the application
+     * @param applicationName      the name of the application
      * @param applicationMainClass the main class that launches the chain on the cluster
      */
     private void init(String applicationName, Class<?> applicationMainClass) {
@@ -171,7 +171,8 @@ public class DistributedDriver extends Driver {
     }
 
     @Override
-    public void run() throws Exception {}
+    public void run() throws Exception {
+    }
 
     public FileSystem getFileSystem() throws IOException {
         if (this.fileSystem == null)

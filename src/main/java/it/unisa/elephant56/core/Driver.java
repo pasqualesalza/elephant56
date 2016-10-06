@@ -40,38 +40,38 @@ public abstract class Driver {
 
     protected FileSystem fileSystem;
 
-	protected Class<? extends Individual> individualClass;
-	protected Class<? extends FitnessValue> fitnessValueClass;
+    protected Class<? extends Individual> individualClass;
+    protected Class<? extends FitnessValue> fitnessValueClass;
 
-	protected Class<? extends Initialisation> initialisationClass;
-	protected int initialisationPopulationSize;
+    protected Class<? extends Initialisation> initialisationClass;
+    protected int initialisationPopulationSize;
     protected boolean isInitialisationActive;
 
-	protected Class<? extends FitnessEvaluation> fitnessEvaluationClass;
-	protected Class<? extends ParentsSelection> parentsSelectionClass;
+    protected Class<? extends FitnessEvaluation> fitnessEvaluationClass;
+    protected Class<? extends ParentsSelection> parentsSelectionClass;
 
     protected Class<? extends Elitism> elitismClass;
     protected boolean isElitismActive;
 
     protected Class<? extends Crossover> crossoverClass;
-	protected Class<? extends Mutation> mutationClass;
+    protected Class<? extends Mutation> mutationClass;
 
     protected Class<? extends SurvivalSelection> survivalSelectionClass;
     protected boolean isSurvivalSelectionActive;
 
-	protected Class<? extends TerminationConditionCheck> terminationConditionCheckClass;
-	protected long maximumNumberOfGenerations;
+    protected Class<? extends TerminationConditionCheck> terminationConditionCheckClass;
+    protected long maximumNumberOfGenerations;
 
-	protected Path workingFolderPath;
-	protected Path inputPopulationFolderPath;
+    protected Path workingFolderPath;
+    protected Path inputPopulationFolderPath;
 
-	protected boolean isTimeReporterActive;
-	protected Path timeReporterFolderPath;
+    protected boolean isTimeReporterActive;
+    protected Path timeReporterFolderPath;
 
-	protected boolean isIndividualReporterActive;
-	protected Path individualReporterFolderPath;
+    protected boolean isIndividualReporterActive;
+    protected Path individualReporterFolderPath;
 
-	protected Properties userProperties;
+    protected Properties userProperties;
 
     /**
      * Constructs a new driver.
@@ -114,61 +114,61 @@ public abstract class Driver {
             this.configuration = configuration;
     }
 
-	/**
-	 * Sets the working directory path.
-	 *
-	 * @param path the working directory path
-	 */
-	public void setWorkingFolderPath(Path path) {
-		this.workingFolderPath = path;
-	}
+    /**
+     * Sets the working directory path.
+     *
+     * @param path the working directory path
+     */
+    public void setWorkingFolderPath(Path path) {
+        this.workingFolderPath = path;
+    }
 
     public Path getWorkingFolderPath() {
         return this.workingFolderPath;
     }
 
-	/**
-	 * Sets the input population folder. It is needed if the initialisation is not used.
-	 *
-	 * @param folderPath the input population folder path
-	 */
-	public void setInputPopulationFolderPath(Path folderPath) {
-		this.inputPopulationFolderPath = folderPath;
-	}
+    /**
+     * Sets the input population folder. It is needed if the initialisation is not used.
+     *
+     * @param folderPath the input population folder path
+     */
+    public void setInputPopulationFolderPath(Path folderPath) {
+        this.inputPopulationFolderPath = folderPath;
+    }
 
-	/**
-	 * Sets the individual class.
-	 *
-	 * @param individualClass the individual class
-	 */
-	public void setIndividualClass(Class<? extends Individual> individualClass) {
-		if (individualClass == null)
-			individualClass = Individual.class;
-		this.individualClass = individualClass;
-	}
+    /**
+     * Sets the individual class.
+     *
+     * @param individualClass the individual class
+     */
+    public void setIndividualClass(Class<? extends Individual> individualClass) {
+        if (individualClass == null)
+            individualClass = Individual.class;
+        this.individualClass = individualClass;
+    }
 
-	/**
-	 * Sets the fitness value class.
-	 *
-	 * @param fitnessValueClass the fitness value class
-	 */
-	public void setFitnessValueClass(Class<? extends FitnessValue> fitnessValueClass) {
-		if (fitnessValueClass == null)
-			fitnessValueClass = FitnessValue.class;
-		this.fitnessValueClass = fitnessValueClass;
+    /**
+     * Sets the fitness value class.
+     *
+     * @param fitnessValueClass the fitness value class
+     */
+    public void setFitnessValueClass(Class<? extends FitnessValue> fitnessValueClass) {
+        if (fitnessValueClass == null)
+            fitnessValueClass = FitnessValue.class;
+        this.fitnessValueClass = fitnessValueClass;
 
-	}
+    }
 
-	/**
-	 * Sets the initialisation class.
-	 *
-	 * @param initialisationClass the initialisation class
-	 */
-	public void setInitialisationClass(Class<? extends Initialisation> initialisationClass) {
+    /**
+     * Sets the initialisation class.
+     *
+     * @param initialisationClass the initialisation class
+     */
+    public void setInitialisationClass(Class<? extends Initialisation> initialisationClass) {
         if (initialisationClass == null)
             initialisationClass = Initialisation.class;
-	    this.initialisationClass = initialisationClass;
-	}
+        this.initialisationClass = initialisationClass;
+    }
 
     /**
      * Sets the number of individuals to generate during the initialisation.
@@ -189,16 +189,16 @@ public abstract class Driver {
         this.isInitialisationActive = active;
     }
 
-	/**
-	 * Sets the fitness class.
-	 *
-	 * @param fitnessEvaluationClass the fitness class
-	 */
-	public void setFitnessEvaluationClass(Class<? extends FitnessEvaluation> fitnessEvaluationClass) {
-		if (fitnessEvaluationClass == null)
+    /**
+     * Sets the fitness class.
+     *
+     * @param fitnessEvaluationClass the fitness class
+     */
+    public void setFitnessEvaluationClass(Class<? extends FitnessEvaluation> fitnessEvaluationClass) {
+        if (fitnessEvaluationClass == null)
             fitnessEvaluationClass = FitnessEvaluation.class;
-		this.fitnessEvaluationClass = fitnessEvaluationClass;
-	}
+        this.fitnessEvaluationClass = fitnessEvaluationClass;
+    }
 
     /**
      * Sets the elitism class to execute during the job.
@@ -220,38 +220,38 @@ public abstract class Driver {
         this.isElitismActive = active;
     }
 
-	/**
-	 * Sets the parents selection class.
-	 *
-	 * @param parentsSelectionClass the selection class
-	 */
-	public void setParentsSelectionClass(Class<? extends ParentsSelection> parentsSelectionClass) {
-		if (parentsSelectionClass == null)
+    /**
+     * Sets the parents selection class.
+     *
+     * @param parentsSelectionClass the selection class
+     */
+    public void setParentsSelectionClass(Class<? extends ParentsSelection> parentsSelectionClass) {
+        if (parentsSelectionClass == null)
             parentsSelectionClass = ParentsSelection.class;
-		this.parentsSelectionClass = parentsSelectionClass;
-	}
+        this.parentsSelectionClass = parentsSelectionClass;
+    }
 
-	/**
-	 * Sets the crossover class.
-	 *
-	 * @param crossoverClass the crossover class
-	 */
-	public void setCrossoverClass(Class<? extends Crossover> crossoverClass) {
-		if (crossoverClass == null)
-			crossoverClass = Crossover.class;
-		this.crossoverClass = crossoverClass;
-	}
+    /**
+     * Sets the crossover class.
+     *
+     * @param crossoverClass the crossover class
+     */
+    public void setCrossoverClass(Class<? extends Crossover> crossoverClass) {
+        if (crossoverClass == null)
+            crossoverClass = Crossover.class;
+        this.crossoverClass = crossoverClass;
+    }
 
-	/**
-	 * Sets the mutation class.
-	 *
-	 * @param mutationClass the mutation class
-	 */
-	public void setMutationClass(Class<? extends Mutation> mutationClass) {
-		if (mutationClass == null)
-			mutationClass = Mutation.class;
-		this.mutationClass = mutationClass;
-	}
+    /**
+     * Sets the mutation class.
+     *
+     * @param mutationClass the mutation class
+     */
+    public void setMutationClass(Class<? extends Mutation> mutationClass) {
+        if (mutationClass == null)
+            mutationClass = Mutation.class;
+        this.mutationClass = mutationClass;
+    }
 
     /**
      * Sets the survival selection class.
@@ -273,17 +273,17 @@ public abstract class Driver {
         this.isSurvivalSelectionActive = active;
     }
 
-	/**
-	 * Sets the termination condition check class.
-	 *
-	 * @param terminationConditionCheckClass the termination class
-	 */
-	public void setTerminationConditionCheckClass(
+    /**
+     * Sets the termination condition check class.
+     *
+     * @param terminationConditionCheckClass the termination class
+     */
+    public void setTerminationConditionCheckClass(
             Class<? extends TerminationConditionCheck> terminationConditionCheckClass) {
-		if (terminationConditionCheckClass == null)
-			terminationConditionCheckClass = TerminationConditionCheck.class;
-		this.terminationConditionCheckClass = terminationConditionCheckClass;
-	}
+        if (terminationConditionCheckClass == null)
+            terminationConditionCheckClass = TerminationConditionCheck.class;
+        this.terminationConditionCheckClass = terminationConditionCheckClass;
+    }
 
     /**
      * Sets the maximum number of generations before terminating.
@@ -295,24 +295,24 @@ public abstract class Driver {
     }
 
     /**
-	 * Sets the user properties.
-	 *
-	 * @param properties the user properties
-	 */
-	public void setUserProperties(Properties properties) {
-		if (properties == null)
-			properties = new Properties();
-		this.userProperties = properties;
-	}
+     * Sets the user properties.
+     *
+     * @param properties the user properties
+     */
+    public void setUserProperties(Properties properties) {
+        if (properties == null)
+            properties = new Properties();
+        this.userProperties = properties;
+    }
 
-	/**
-	 * Activates the time reporter.
-	 *
-	 * @param active "true" to activate, "false" otherwise
-	 */
-	public void activateTimeReporter(boolean active) {
-		this.isTimeReporterActive = active;
-	}
+    /**
+     * Activates the time reporter.
+     *
+     * @param active "true" to activate, "false" otherwise
+     */
+    public void activateTimeReporter(boolean active) {
+        this.isTimeReporterActive = active;
+    }
 
     /**
      * Activates the individual reporter.

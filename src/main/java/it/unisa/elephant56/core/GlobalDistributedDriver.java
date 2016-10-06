@@ -44,9 +44,9 @@ public class GlobalDistributedDriver extends DistributedDriver {
     /**
      * Constructs a new driver.
      *
-     * @param applicationName the name of the application
+     * @param applicationName      the name of the application
      * @param applicationMainClass the main class that launches the chain on the cluster
-     * @param numberOfNodes the number of fitness evaluators
+     * @param numberOfNodes        the number of fitness evaluators
      */
     public GlobalDistributedDriver(String applicationName, Class<?> applicationMainClass, int numberOfNodes) {
         super(applicationName, applicationMainClass);
@@ -57,10 +57,10 @@ public class GlobalDistributedDriver extends DistributedDriver {
      * Constructs a new driver specifying the configuration,
      * referred only to the filesystem operations.
      *
-     * @param applicationName the name of the application
+     * @param applicationName      the name of the application
      * @param applicationMainClass the main class that launches the chain on the cluster
-     * @param numberOfNodes the number of fitness evaluators
-     * @param configuration the configuration
+     * @param numberOfNodes        the number of fitness evaluators
+     * @param configuration        the configuration
      */
     public GlobalDistributedDriver(
             String applicationName, Class<?> applicationMainClass, int numberOfNodes, Configuration configuration) {

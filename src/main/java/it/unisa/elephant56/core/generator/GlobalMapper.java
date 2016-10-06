@@ -30,31 +30,31 @@ public class GlobalMapper
     // GenerationsExecutor object.
     private GlobalDistributedGenerationsBlockExecutor generationsBlockExecutor;
 
-	// Configuration object.
-	private Configuration configuration;
+    // Configuration object.
+    private Configuration configuration;
 
-	// Configuration variables.
-	private boolean isTimeReporterActive;
-	private GeneticOperatorsTimeReporter geneticOperatorsTimeReporter;
+    // Configuration variables.
+    private boolean isTimeReporterActive;
+    private GeneticOperatorsTimeReporter geneticOperatorsTimeReporter;
     private GenerationsBlockTimeReporter generationsBlockTimeReporter;
     private MapReduceTimeReporter mapreduceTimeReporter;
     private Path mapreduceMapperPartialTimeReportFilePath;
 
-	// Task objects.
-	private FileSystem fileSystem;
+    // Task objects.
+    private FileSystem fileSystem;
 
     private long generationNumber;
 
-	private int fitnessEvaluatorNumber;
-	private int totalNumberOfFitnessEvaluators;
-	
-	private List<IndividualWrapper<Individual, FitnessValue>> inputPopulation;
+    private int fitnessEvaluatorNumber;
+    private int totalNumberOfFitnessEvaluators;
 
-	private Properties userProperties;
+    private List<IndividualWrapper<Individual, FitnessValue>> inputPopulation;
+
+    private Properties userProperties;
 
     @SuppressWarnings("unchecked")
-	@Override
-	protected void setup(Context context) throws IOException {
+    @Override
+    protected void setup(Context context) throws IOException {
         // Reads the configuration from the context.
         this.configuration = context.getConfiguration();
 
@@ -137,9 +137,9 @@ public class GlobalMapper
         // Instantiates the population.
         this.inputPopulation = new ArrayList<IndividualWrapper<Individual, FitnessValue>>();
     }
-	
-	@Override
-	protected void map(AvroKey<IndividualWrapper<Individual, FitnessValue>> key, IntWritable value, Context context) {
+
+    @Override
+    protected void map(AvroKey<IndividualWrapper<Individual, FitnessValue>> key, IntWritable value, Context context) {
         // Adds the current individual to the population.
         IndividualWrapper<Individual, FitnessValue> individualWrapperClone = null;
         try {
@@ -155,8 +155,8 @@ public class GlobalMapper
     /**
      * Executes the Genetic Algorithm functions.
      */
-	@Override
-	protected void cleanup(Context context) throws IOException, InterruptedException {
+    @Override
+    protected void cleanup(Context context) throws IOException, InterruptedException {
         // Sets the input population.
         this.generationsBlockExecutor.setInputPopulation(this.inputPopulation);
 
@@ -197,5 +197,5 @@ public class GlobalMapper
             // Finalises the files.
             this.geneticOperatorsTimeReporter.finaliseFile();
         }
-	}
+    }
 }

@@ -30,7 +30,7 @@ public class SequentialDriver extends Driver {
      */
     public SequentialDriver() {
         super();
-        
+
         this.inputPopulation = new ArrayList<IndividualWrapper<Individual, FitnessValue>>();
     }
 

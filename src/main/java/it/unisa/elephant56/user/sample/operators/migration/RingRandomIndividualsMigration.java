@@ -13,24 +13,23 @@ import it.unisa.elephant56.user.common.Individual;
  *
  * @param <IndividualType>
  * @param <FitnessValueType>
- * 
  * @author Pasquale Salza
  */
 public class RingRandomIndividualsMigration<IndividualType extends Individual, FitnessValueType extends FitnessValue>
-		extends RandomIndividualsMigration<IndividualType, FitnessValueType> {
-	
-	public RingRandomIndividualsMigration(
+        extends RandomIndividualsMigration<IndividualType, FitnessValueType> {
+
+    public RingRandomIndividualsMigration(
             Integer islandNumber, Integer totalNumberOfIslands, Properties userProperties, Configuration configuration
     ) {
         super(islandNumber, totalNumberOfIslands, userProperties, configuration);
-	}
-	
-	@Override
-	protected int getNextDestination(
+    }
+
+    @Override
+    protected int getNextDestination(
             IndividualWrapper<IndividualType, FitnessValueType> currentIndividual,
             int currentIndividualNumber, int numberOfIndividualsToMigrate, int totalNumberOfIndividuals
     ) {
-		return (this.islandNumber + 1) % this.totalNumberOfIslands;
-	}
-	
+        return (this.islandNumber + 1) % this.totalNumberOfIslands;
+    }
+
 }

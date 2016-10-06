@@ -40,7 +40,9 @@ public class GeneticOperatorsTimeReporter extends TimeReporter {
         TOTAL_FITNESS_EVALUATION_DURING_SURVIVAL_SELECTION,
         TOTAL_SURVIVAL_SELECTION,
         TOTAL_MIGRATION
-    };
+    }
+
+    ;
 
     public GeneticOperatorsTimeReporter(Path outputFilePath, FileSystem fileSystem) throws IOException {
         super(outputFilePath, fileSystem, HEADER);

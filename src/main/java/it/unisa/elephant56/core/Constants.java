@@ -44,10 +44,10 @@ public final class Constants {
             "elephant56.configuration.generation_name_format";
 
     /**
-	 * The path of the folder where are the files representing the fact the termination condition has been satisfied at
+     * The path of the folder where are the files representing the fact the termination condition has been satisfied at
      * least once.
-	 */
-	public static final String CONFIGURATION_TERMINATION_FLAG_FILES_FOLDER_PATH =
+     */
+    public static final String CONFIGURATION_TERMINATION_FLAG_FILES_FOLDER_PATH =
             "elephant56.configuration.termination_flag_files_folder.path";
 
     /**
@@ -56,10 +56,10 @@ public final class Constants {
     public static final String TERMINATION_FLAG_FILE_EXTENSION =
             "termination_flag";
 
-	/**
-	 * The path of the folder where the islands properties files are.
-	 */
-	public static final String CONFIGURATION_ISLAND_PROPERTIES_FILES_FOLDER_PATH =
+    /**
+     * The path of the folder where the islands properties files are.
+     */
+    public static final String CONFIGURATION_ISLAND_PROPERTIES_FILES_FOLDER_PATH =
             "elephant56.configuration.island_properties_files_folder.path";
 
     /**
@@ -98,70 +98,70 @@ public final class Constants {
     public static final String CONFIGURATION_SURVIVAL_SELECTION_ACTIVE =
             "elephant56.configuration.survival_selection.active";
 
-	/**
-	 * The flag that indicates if the elitism is active or not.
-	 */
-	public static final String CONFIGURATION_ELITISM_ACTIVE =
+    /**
+     * The flag that indicates if the elitism is active or not.
+     */
+    public static final String CONFIGURATION_ELITISM_ACTIVE =
             "elephant56.configuration.elitism.active";
-	
-	/**
-	 * The flag that indicates if the migration is active or not.
-	 */
-	public static final String CONFIGURATION_MIGRATION_ACTIVE =
+
+    /**
+     * The flag that indicates if the migration is active or not.
+     */
+    public static final String CONFIGURATION_MIGRATION_ACTIVE =
             "elephant56.configuration.migration.active";
-	
-	/**
-	 * The flag that indicates if the time reporter is active or not.
-	 */
-	public static final String CONFIGURATION_TIME_REPORTER_ACTIVE =
+
+    /**
+     * The flag that indicates if the time reporter is active or not.
+     */
+    public static final String CONFIGURATION_TIME_REPORTER_ACTIVE =
             "elephant56.configuration.reporter.time.active";
-	
-	/**
-	 * The flag that indicates if the individual reporter is active or not.
-	 */
-	public static final String CONFIGURATION_INDIVIDUAL_REPORTER_ACTIVE =
+
+    /**
+     * The flag that indicates if the individual reporter is active or not.
+     */
+    public static final String CONFIGURATION_INDIVIDUAL_REPORTER_ACTIVE =
             "elephant56.configuration.reporter.individual.active";
-	
-	/**
-	 * The fitness value class configuration string.
-	 */
-	public static final String CONFIGURATION_FITNESS_VALUE_CLASS =
+
+    /**
+     * The fitness value class configuration string.
+     */
+    public static final String CONFIGURATION_FITNESS_VALUE_CLASS =
             "elephant56.configuration.fitness_value.class";
-	
-	/**
-	 * The initialisation class configuration string.
-	 */
-	public static final String CONFIGURATION_INITIALISATION_CLASS =
+
+    /**
+     * The initialisation class configuration string.
+     */
+    public static final String CONFIGURATION_INITIALISATION_CLASS =
             "elephant56.configuration.initialisation.class";
-	
-	/**
-	 * The fitness evaluation class configuration string.
-	 */
-	public static final String CONFIGURATION_FITNESS_EVALUATION_CLASS =
+
+    /**
+     * The fitness evaluation class configuration string.
+     */
+    public static final String CONFIGURATION_FITNESS_EVALUATION_CLASS =
             "elephant56.configuration.fitness_evaluation.class";
-	
-	/**
-	 * The termination condition check class configuration string.
-	 */
-	public static final String CONFIGURATION_TERMINATION_CONDITION_CHECK_CLASS =
+
+    /**
+     * The termination condition check class configuration string.
+     */
+    public static final String CONFIGURATION_TERMINATION_CONDITION_CHECK_CLASS =
             "elephant56.configuration.termination_condition_check.class";
-	
-	/**
-	 * The parents selection class configuration string.
-	 */
-	public static final String CONFIGURATION_PARENTS_SELECTION_CLASS =
+
+    /**
+     * The parents selection class configuration string.
+     */
+    public static final String CONFIGURATION_PARENTS_SELECTION_CLASS =
             "elephant56.configuration.parents_selection.class";
-	
-	/**
-	 * The crossover class configuration string.
-	 */
-	public static final String CONFIGURATION_CROSSOVER_CLASS =
+
+    /**
+     * The crossover class configuration string.
+     */
+    public static final String CONFIGURATION_CROSSOVER_CLASS =
             "elephant56.configuration.crossover.class";
-	
-	/**
-	 * The mutation class configuration string.
-	 */
-	public static final String CONFIGURATION_MUTATION_CLASS =
+
+    /**
+     * The mutation class configuration string.
+     */
+    public static final String CONFIGURATION_MUTATION_CLASS =
             "elephant56.configuration.mutation.class";
 
     /**
@@ -170,16 +170,16 @@ public final class Constants {
     public static final String CONFIGURATION_SURVIVAL_SELECTION_CLASS =
             "elephant56.configuration.survival_selection.class";
 
-	/**
-	 * The elitism class configuration string.
-	 */
-	public static final String CONFIGURATION_ELITISM_CLASS =
+    /**
+     * The elitism class configuration string.
+     */
+    public static final String CONFIGURATION_ELITISM_CLASS =
             "elephant56.configuration.elitism.class";
-	
-	/**
-	 * The migration class configuration string.
-	 */
-	public static final String CONFIGURATION_MIGRATION_CLASS =
+
+    /**
+     * The migration class configuration string.
+     */
+    public static final String CONFIGURATION_MIGRATION_CLASS =
             "elephant56.configuration.migration.class";
 
     /**
@@ -188,10 +188,10 @@ public final class Constants {
     public static final String CONFIGURATION_GRID_PARALLELISATION_MODEL_IS_LAST_GENERATION =
             "elephant56.configuration.grid_parallelisation_model.is_last_generation";
 
-	/**
-	 * The reports folder path.
-	 */
-	public static final String CONFIGURATION_REPORTS_FOLDER_PATH =
+    /**
+     * The reports folder path.
+     */
+    public static final String CONFIGURATION_REPORTS_FOLDER_PATH =
             "elephant56.configuration.reports_folder.path";
 
     public static final String CONFIGURATION_GENERATIONS_BLOCK_NUMBER =
@@ -239,49 +239,49 @@ public final class Constants {
     public static final String DEFAULT_OFFSPRING_OUTPUT_FOLDER_NAME =
             "offspring";
 
-	/**
-	 * The default input folder name.
-	 */
-	public static final String DEFAULT_INPUT_FOLDER_NAME =
+    /**
+     * The default input folder name.
+     */
+    public static final String DEFAULT_INPUT_FOLDER_NAME =
             "input";
-	
-	/**
-	 * The default output folder name.
-	 */
-	public static final String DEFAULT_OUTPUT_FOLDER_NAME =
+
+    /**
+     * The default output folder name.
+     */
+    public static final String DEFAULT_OUTPUT_FOLDER_NAME =
             "output";
-	
-	/**
-	 * The default generations folder name.
-	 */
-	public static final String DEFAULT_GENERATIONS_BLOCKS_FOLDER_NAME =
+
+    /**
+     * The default generations folder name.
+     */
+    public static final String DEFAULT_GENERATIONS_BLOCKS_FOLDER_NAME =
             "generations_blocks";
-	
-	/**
-	 * The default termination flag files folder name.
-	 */
-	public static final String DEFAULT_TERMINATION_FLAG_FILES_FOLDER_NAME =
+
+    /**
+     * The default termination flag files folder name.
+     */
+    public static final String DEFAULT_TERMINATION_FLAG_FILES_FOLDER_NAME =
             "termination_flags";
-	
-	/**
-	 * The default solutions folder name.
-	 */
-	public static final String DEFAULT_SOLUTIONS_FOLDER_NAME =
+
+    /**
+     * The default solutions folder name.
+     */
+    public static final String DEFAULT_SOLUTIONS_FOLDER_NAME =
             "solutions";
-	
-	/**
-	 * The default reports folder name.
-	 */
-	public static final String DEFAULT_REPORTS_FOLDER_NAME =
+
+    /**
+     * The default reports folder name.
+     */
+    public static final String DEFAULT_REPORTS_FOLDER_NAME =
             "reports";
 
-	/**
-	 * The default islands properties files folder name.
-	 */
-	public static final String DEFAULT_ISLANDS_PROPERTIES_FILES_FOLDER_NAME =
+    /**
+     * The default islands properties files folder name.
+     */
+    public static final String DEFAULT_ISLANDS_PROPERTIES_FILES_FOLDER_NAME =
             "islands_properties";
 
-	private Constants() {
-		throw new AssertionError();
-	}
+    private Constants() {
+        throw new AssertionError();
+    }
 }

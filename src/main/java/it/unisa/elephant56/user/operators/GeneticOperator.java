@@ -10,25 +10,25 @@ public class GeneticOperator<IndividualType extends Individual, FitnessValueType
     protected int islandNumber;
     protected int totalNumberOfIslands;
 
-	protected Properties userProperties;
-	protected Configuration configuration;
+    protected Properties userProperties;
+    protected Configuration configuration;
 
-	/**
-	 * Constructs the instance of the class passing the properties.
-	 *
-     * @param islandNumber the island number
+    /**
+     * Constructs the instance of the class passing the properties.
+     *
+     * @param islandNumber         the island number
      * @param totalNumberOfIslands the total number of islands
-	 * @param userProperties the properties defined by the user
-	 * @param configuration the configuration
-	 */
-	public GeneticOperator(
+     * @param userProperties       the properties defined by the user
+     * @param configuration        the configuration
+     */
+    public GeneticOperator(
             Integer islandNumber, Integer totalNumberOfIslands, Properties userProperties, Configuration configuration
     ) {
         this.islandNumber = islandNumber;
         this.totalNumberOfIslands = totalNumberOfIslands;
-		this.userProperties = userProperties;
-		this.configuration = configuration;
-	}
+        this.userProperties = userProperties;
+        this.configuration = configuration;
+    }
 
     public int getIslandNumber() {
         return this.islandNumber;
@@ -38,21 +38,21 @@ public class GeneticOperator<IndividualType extends Individual, FitnessValueType
         return this.totalNumberOfIslands;
     }
 
-	/**
-	 * Returns the properties.
-	 *
-	 * @return the user properties
-	 */
-	public Properties getUserProperties() {
-		return this.userProperties;
-	}
-	
-	/**
-	 * Returns the configuration.
-	 *
-	 * @return the configuration
-	 */
-	public Configuration getConfiguration() {
-		return this.configuration;
-	}
+    /**
+     * Returns the properties.
+     *
+     * @return the user properties
+     */
+    public Properties getUserProperties() {
+        return this.userProperties;
+    }
+
+    /**
+     * Returns the configuration.
+     *
+     * @return the configuration
+     */
+    public Configuration getConfiguration() {
+        return this.configuration;
+    }
 }

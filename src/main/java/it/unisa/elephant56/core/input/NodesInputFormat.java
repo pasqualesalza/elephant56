@@ -53,7 +53,7 @@ public class NodesInputFormat<Type> extends InputFormat<AvroKey<Type>, IntWritab
     /**
      * Sets the number of nodes.
      *
-     * @param job the job to configure
+     * @param job           the job to configure
      * @param numberOfNodes the number of nodes
      */
     public static void setNumberOfNodes(Job job, int numberOfNodes) {
@@ -75,7 +75,7 @@ public class NodesInputFormat<Type> extends InputFormat<AvroKey<Type>, IntWritab
     /**
      * Sets the input population folder path.
      *
-     * @param job the job to configure
+     * @param job        the job to configure
      * @param folderPath the input population folder path
      */
     public static void setInputPopulationFolderPath(Job job, Path folderPath) {
@@ -97,7 +97,7 @@ public class NodesInputFormat<Type> extends InputFormat<AvroKey<Type>, IntWritab
     /**
      * Sets the number of individuals to generate during the initialisation.
      *
-     * @param job the job to configure
+     * @param job  the job to configure
      * @param size the number of individuals to generate
      */
     public static void setInitialisationPopulationSizePerSplit(Job job, int size) {
@@ -117,20 +117,20 @@ public class NodesInputFormat<Type> extends InputFormat<AvroKey<Type>, IntWritab
     }
 
     /**
-	 * Activates the initialisation and the production of empty splits.
-	 *
-	 * @param job the job to configure
-	 * @param active "true" to activate, "false" otherwise
-	 */
-	public static void activateInitialisation(Job job, boolean active) {
-		Configuration configuration = job.getConfiguration();
-		configuration.setBoolean(IS_INITIALISATION_ACTIVE, active);
-	}
+     * Activates the initialisation and the production of empty splits.
+     *
+     * @param job    the job to configure
+     * @param active "true" to activate, "false" otherwise
+     */
+    public static void activateInitialisation(Job job, boolean active) {
+        Configuration configuration = job.getConfiguration();
+        configuration.setBoolean(IS_INITIALISATION_ACTIVE, active);
+    }
 
     /**
      * Sets the partitioner destinations of individuals.
      *
-     * @param job the job to configure
+     * @param job          the job to configure
      * @param destinations the list of destinations
      */
     public static void setPartitionerNodesDestinations(Job job, List<Integer> destinations) {
@@ -144,7 +144,6 @@ public class NodesInputFormat<Type> extends InputFormat<AvroKey<Type>, IntWritab
      * Gets the partitioner destinations of individuals.
      *
      * @param configuration the configuration to parse
-     *
      * @return the list of destinations or null
      */
     public static List<Integer> getPartitionerNodesDestinations(Configuration configuration) {
@@ -241,22 +240,21 @@ public class NodesInputFormat<Type> extends InputFormat<AvroKey<Type>, IntWritab
         return splits;
     }
 
-	/**
-	 * Retrieves a new record reader.
-	 */
-	@Override
-	public RecordReader<AvroKey<Type>, IntWritable> createRecordReader(InputSplit split, TaskAttemptContext context)
-			throws IOException, InterruptedException {
-		return new PopulationRecordReader<>();
-	}
+    /**
+     * Retrieves a new record reader.
+     */
+    @Override
+    public RecordReader<AvroKey<Type>, IntWritable> createRecordReader(InputSplit split, TaskAttemptContext context)
+            throws IOException, InterruptedException {
+        return new PopulationRecordReader<>();
+    }
 
     /**
      * Reads the number of individuals into a file from meta-data.
      *
-     * @param filePath the file path
+     * @param filePath      the file path
      * @param configuration the configuration
      * @return the number of individuals
-     *
      * @throws IOException
      */
     public static int readNumberOfIndividuals(Path filePath, Configuration configuration) throws IOException {

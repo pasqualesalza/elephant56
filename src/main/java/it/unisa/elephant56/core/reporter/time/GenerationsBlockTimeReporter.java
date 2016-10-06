@@ -22,7 +22,9 @@ public class GenerationsBlockTimeReporter extends TimeReporter {
         INITIALISATION,
         GENERATION,
         GENERATIONS_BLOCK
-    };
+    }
+
+    ;
 
     public GenerationsBlockTimeReporter(Path outputFilePath, FileSystem fileSystem) throws IOException {
         super(outputFilePath, fileSystem, HEADER);
