@@ -1,6 +1,6 @@
 # elephant56
 
-elephant56 is a Genetic Algorithms (GAs) framework for Hadoop MapReduce with the aim of easing the development of distributed GAs. It provides high level functionalities which can be reused by developers, who no longer need to worry about complex internal structures.
+*elephant56* is a Genetic Algorithms (GAs) framework for Hadoop MapReduce with the aim of easing the development of distributed GAs. It provides high level functionalities which can be reused by developers, who no longer need to worry about complex internal structures.
 
 ## Features
 
@@ -24,9 +24,13 @@ elephant56 is a Genetic Algorithms (GAs) framework for Hadoop MapReduce with the
 6. Pack everything in a JAR
 7. Run with Hadoop!
 
+## Example of Use
+
+We provide a full deployable and runnable [example](examples/onemax) implementing the *OneMax* problem.
+
 ## License
 
-elephant56 is licensed under the terms of the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html). Please see the [LICENSE](LICENSE.md) file for full details.
+*elephant56* is licensed under the terms of the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html). Please see the [LICENSE](LICENSE.md) file for full details.
 
 ## Credits
 
