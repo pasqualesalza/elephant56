@@ -13,9 +13,9 @@
     <!-- Global properties. -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <distributed.main.class>it.unisa.elephant56.examples.onemax.DistributedApp</distributed.main.class>
+        
         <sequential.main.class>it.unisa.elephant56.examples.onemax.SequentialApp</sequential.main.class>
+        <distributed.main.class>it.unisa.elephant56.examples.onemax.SequentialApp</distributed.main.class>
 
         <elephant56.version>1.0.1</elephant56.version>
         <hadoop.version>0.23.11</hadoop.version>

@@ -1,4 +1,4 @@
-package it.unisa.elephant56.onemax;
+package it.unisa.elephant56.examples.onemax;
 
 import org.apache.hadoop.fs.Path;
 
